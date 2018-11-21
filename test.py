@@ -12,30 +12,47 @@ chrome_options.add_argument("--headless")
 driver = os.path.join("/usr/bin","chromedriver")
 
 browser = webdriver.Chrome(executable_path=driver,chrome_options=chrome_options)
-browser.get("http://165.227.162.126/")
 
-title = browser.title
-print('-------------------------------------------------------------')
-print('Currently testing ' + title)
-print('-------------------------------------------------------------')
+try:
+  print('-------------------------------------------------------------')
+  print('               STARTING VALIDATION TESTS'                     )
+  print('-------------------------------------------------------------')
 
-if(title != 'Steven Bucholtz | Full Stack Developer'):
-    print('Test Failed: Title does not match "Steven Bucholtz | Full Stack Developer"')
-else:
-    print('Test Passed: Index Page Found')
+  browser.get("http://165.227.162.126/")
+  title = browser.title
 
-browser.get('http://165.227.162.126/verifyuser')
-print('Test Passed: Admin Page Accessible')
+  assert "Steven Bucholtz" in browser.title
+  print('Test Passed: Page Title')
 
-elem = browser.find_element_by_id('cmdline')
-print('Test Passed: Command Line Found')
+  browser.get('http://165.227.162.126/verifyuser')
+  print('Test Passed: Admin Page Accessible')
 
-elem.send_keys('login sbucholtz -p password')
-elem.send_keys(Keys.RETURN)
-print('Test Passed: Logging In')
+  elem = browser.find_element_by_id('cmdline')
+  print('Test Passed: Command Line Found')
 
-assert browser.page_source.find("You have logged in. Welcome Steven.")
-print('Test Passed: Login Confirmation Text')
-browser.save_screenshot('/root/project3/tests/' + time.strftime("%Y%m%d-%H%M%S") + '.png')
+  elem.send_keys('login sbucholtz -p password')
+  elem.send_keys(Keys.RETURN)
+  print('Test Passed: Logging In')
 
-browser.close()
+  assert browser.page_source.find("You have logged in. Welcome Steven.")
+  print('Test Passed: Login Confirmation Text')
+
+  browser.get('http://165.227.162.126/verifyuser')
+  elem = browser.find_element_by_id('cmdline')
+  elem.send_keys('login wronguser -p wrongpassword')
+  elem.send_keys(Keys.RETURN)
+  assert "You have logged in. Welcome Steven." not in browser.page_source
+  elem = browser.find_element_by_id('login-failed')
+  assert "Login failed." in browser.page_source
+  print('Test Passed: Failed Login')
+
+  browser.close()
+  print('-------------------------------------------------------------')
+  print('TEST SUCCESSFUL')
+  print('-------------------------------------------------------------')
+except Exception:
+  browser.save_screenshot('/root/project3/tests/' + time.strftime("%Y%m%d-%H%M%S") + '.png')
+  browser.close()
+  print('-------------------------------------------------------------')
+  print('       TEST FAILED - SEE SCREENSHOT FOR MORE DETAILS'         )
+  print('-------------------------------------------------------------')

@@ -105,7 +105,7 @@ body {
   <body>
       {% with messages = get_flashed_messages() %}
       {% if messages %}
-      <div class="alert alert-danger invalid_login" role="alert">
+      <div class="alert alert-danger invalid_login" role="alert" id="login-failed">
       {% for message in messages %}
       <strong>{{ message }}</strong>
       {% endfor %}
