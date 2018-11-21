@@ -1,7 +1,6 @@
 import sqlite3 
 from flask import Flask, request, render_template, redirect, url_for, session, flash, g, abort
 
-
 app = Flask(__name__)
 DATABASE = 'database.db'
 app.secret_key = '12308adsijkadsads129033210321'
@@ -18,7 +17,7 @@ def verifyuser():
 @app.route('/authenticate_user', methods=['POST'])
 def authenticate_user():
   if request.form['username'] == 'sbucholtz' and request.form['password'] == 'password':
-    return "pls stop"
+    return "You have logged in. Welcome Steven."
   else:
     flash('Invalid login. This attempt has been logged.')
     return redirect(url_for('verifyuser'))
