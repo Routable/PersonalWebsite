@@ -8,6 +8,11 @@ body, html {
     color: #555;
 }
 
+footer {
+    background-color:#F6F5F5;
+    padding-top:40px;
+}
+
 #name_title {
 font-family: 'Roboto Mono', monospace;
 float:right;
@@ -259,3 +264,46 @@ dd {
     transition: 0.3s;
 }
 /* End Footer Styling */
+
+.resume-list .resume-list__block {
+    border-left: 2px solid #6d56c1;
+    padding-left: 25px;
+    padding-bottom: 50px;
+}
+
+.resume-list .resume-list_title {
+    font-family: Roboto Mono,monospace;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #999;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.resume-list .resume-list__block p {
+    margin: 0;
+}
+
+.resume-list .resume-list__block-title {
+    text-transform: uppercase;
+    color: #6d56c1;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Roboto Mono,monospace;
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+.resume-list .resume-list__block:before {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #6d56c1;
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    background-color: #fff;
+    left: 10px;
+}
