@@ -1,6 +1,11 @@
 body, html {
     height: 100%;
     scroll-behavior: smooth;
+    font-family: Roboto,sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #555;
 }
 
 #name_title {
@@ -22,6 +27,14 @@ float:right;
     width: 100%;
     height: 100px;
     transition: all .5s;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 
@@ -93,6 +106,20 @@ animation: blinker 1s step-end infinite;
 }
 
 
+/* Contact Information */
+a {
+    color: white;
+    transition: all .3s;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color:#A7A7A7;
+    text-decoration: none;
+}
+
 .personal-profile .personal-profile__avatar img {
     border-radius: 5px;
     box-shadow: 0 0 27px rgba(96,96,96,.34);
@@ -103,6 +130,26 @@ animation: blinker 1s step-end infinite;
     margin-top: 40px;
     position: relative;
     top: 40px;
+}
+
+.contact-list.contact-list__opacity-titles dt {
+    opacity: .4;
+}
+
+.contact-list dt {
+    float: left;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+dd {
+    display: block;
+    margin-inline-start: 40px;
+}
+
+.contact-list dd {
+    padding-left: 100px;
+    margin-bottom: 15px;
 }
 
 .personal-profile__name {
@@ -116,6 +163,10 @@ animation: blinker 1s step-end infinite;
 .personal-profile__work {
     color: #fff;
     font-family: Roboto Mono,monospace;
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top:-20px;
 }
 
 .contact-list {
