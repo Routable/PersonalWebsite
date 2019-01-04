@@ -18,7 +18,6 @@ def verifyuser():
 def authenticate_user():
   password = request.form['password']
   username = request.form['username']
-
   user_exists = query_db('SELECT COUNT(*) FROM USERS WHERE username = ?', [username])
 
   if(user_exists[0][0] == 1):
@@ -38,6 +37,7 @@ def authenticate_user():
 #-----------------------------------------------------------------
 # Error handlers for malicious users, accidents, and bots.
 # -----------------------------------------------------------------
+
 
 @app.route('/config')
 def submit():
@@ -60,9 +60,6 @@ def error(e):
   return render_template('error.html', code=404), 404
 
 
-
-
-
 #-----------------------------------------------------------------
 # connection_to_sqlite_database as the name implies handles our
 # connection to the SQLITE database.db database file. We keep
@@ -76,12 +73,14 @@ def query_db(query, args=(), one=False):
     cur.close()
     return (rv[0] if rv else None) if one else rv
 
+
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
         db = g._database = sqlite3.connect(DATABASE)
     return db
   
+
 def isLoggedIn():
   if(session.get('login') is None):
     return False
