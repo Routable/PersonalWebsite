@@ -35,14 +35,33 @@ def authenticate_user():
 
 
 
+#-----------------------------------------------------------------
+# Error handlers for malicious users, accidents, and bots.
+# -----------------------------------------------------------------
 
-@app.route('/submit')
+@app.route('/config')
 def submit():
-  return 'stop it'
+  return redirect("https://www.fbi.gov/", code=302)
 
-@app.errorhandler(418)
-def foureighteen(e):
-  return render_template('418.html'), 418
+@app.errorhandler(400)
+def error(e):
+  return render_template('error.html'), 400
+
+@app.errorhandler(401)
+def error(e):
+  return render_template('error.html'), 401
+
+@app.errorhandler(403)
+def error(e):
+  return render_template('error.html'), 403
+
+@app.errorhandler(404)
+def error(e):
+  return render_template('error.html', code=404), 404
+
+
+
+
 
 #-----------------------------------------------------------------
 # connection_to_sqlite_database as the name implies handles our
