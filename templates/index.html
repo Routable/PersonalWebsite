@@ -1,408 +1,167 @@
 ﻿<!doctype html>
-    <html>
-        <head>
-            <title>Steven Bucholtz | Full Stack Developer</title>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
 
-            <!-- Bootstrap Links -->
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<head>
+  <title>Steven Bucholtz | Full Stack Developer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            <!-- Site Font (Roboto Mono) -->
-            <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <!-- Bootstrap Links -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-            <!-- Add icon library -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+  <!-- Site Font (Roboto Mono) -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 
-            <!-- Site CSS -->
-            <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
-        </head>
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <body>
-            <div id="navbar">
-                <a href="#home" class="text">.HELLO_WORLD<span class="blinking-cursor">_</span></a>
-                <a href="#HelloWorld">.RESUME<span class="blinking-cursor"></span></a>
-                <a href="#Portfolio">.PORTFOLIO<span class="blinking-cursor"></span></a>
-                <a href="#References">.REFERENCES<span class="blinking-cursor"></span></a>
-                <a href="#Contact">.CONTACT<span class="blinking-cursor"></span></a>
-            </div>
+  <!-- Site CSS -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
+</head>
 
-            <a name="home"></a>
+<body>
 
-            <!--Header-->
-            <header class="main-header" style="background-image: url({{ url_for('static', filename='images/header.jpg') }})">
-                <div class="container">
-                    <div class="row personal-profile">
-                        <div class="col-md-4 personal-profile__avatar">
-                            <img src="{{url_for('static', filename='images/self.jpg')}}" alt="avatar" style="width:100%;">
-                        </div>
-                        <div class="col-md-8">
-                            <p class="personal-profile__name">Steven Bucholtz</p>
-                            <p class="personal-profile__work">Full Stack Developer</p>
-                            <div class="personal-profile__contacts">
-                                <dl class="contact-list contact-list__opacity-titles">
-                                    <dt>Age:</dt>
-                                    <dd>23</dd>
-                                    <dt>Phone:</dt>
-                                    <dd><a href="tel:250-460-3030">250-460-3030</a></dd>
-                                    <dt>Email:</dt>
-                                    <dd><a href="mailto:stevenabucholtz@gmail.com">stevenabucholtz@gmail.com</a></dd>
-                                    <dt>Address:</dt>
-                                    <dd>Kelowna</dd>
-                                </dl>
-                            </div>
-                            <p class="personal-profile__social">
-                                <a href="https://github.com/Routable" target="_blank"><i class="fa fa-github"></i></a>
-                                <a href="https://www.linkedin.com/in/stevenbucholtz/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <!--Header-->
+  <!-- Navigation -->
+  <div id="navbar">
+    <a href="#home" class="text">.HELLO_WORLD<span class="blinking-cursor">_</span></a>
+    <a href="#HelloWorld">.RESUME<span class="blinking-cursor"></span></a>
+    <a href="#Portfolio">.PORTFOLIO<span class="blinking-cursor"></span></a>
+    <a href="#References">.REFERENCES<span class="blinking-cursor"></span></a>
+    <a href="#Contact">.CONTACT<span class="blinking-cursor"></span></a>
+  </div>
 
-            <!--HELLO_WORLD-->
-            <section id="hello" class="container section">
-                <div class="row">
-                    <div class="col-md-10">
-                        <a name="HelloWorld"><h2 id="hello_header" class="section__title hello_world anim-typewriter">.HELLO_WORLD<span class="blinking-cursor"> |</span></h2></a>
+  <a name="home"></a>
 
-                        <p class="section__description">
-                            I am Junior Web developer able to build a Web presence from the ground up - from concept, navigation,
-                            layout and programming to UX and SEO. Skilled at writing well-designed, testable and efficient code using
-                            current best practices in Web development. Fast learner, hard worker and team player who is proficient in
-                            an array of scripting languages and multimedia Web tools.
-                        </p>
-                        <!-- Download Resume Button-->
-                        <a href="#" class="download"><i class="fa fa-download" style="font-size:30px;"></i>Download Resume</a>
-                    </div>
-                </div>
-            </section>
-            <!--HELLO_WORLD-->
+  <!-- Site Header -->
+  <header class="main-header" style="background-image: url({{ url_for('static', filename='images/header.jpg') }})">S
+    <div class="container">
+      <div class="row personal-profile">
+        <div class="col-md-4 personal-profile__avatar">
+          <img src="{{url_for('static', filename='images/self.jpg')}}" alt="avatar" style="width:100%;">
+        </div>
+        <div class="col-md-8">
+          <p class="personal-profile__name">Steven Bucholtz</p>
+          <p class="personal-profile__work">Full Stack Developer</p>
+          <div class="personal-profile__contacts">
+            <dl class="contact-list contact-list__opacity-titles">
+              <dt>Age:</dt>
+              <dd>23</dd>
+              <dt>Phone:</dt>
+              <dd><a href="tel:250-460-3030">250-460-3030</a></dd>
+              <dt>Email:</dt>
+              <dd><a href="mailto:stevenabucholtz@gmail.com">stevenabucholtz@gmail.com</a></dd>
+              <dt>Address:</dt>
+              <dd>Kelowna</dd>
+            </dl>
+          </div>
+          <p class="personal-profile__social">
+            <a href="https://github.com/Routable" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/stevenbucholtz/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
 
-            <hr />
+  <!-- Import Hello World-->
+  {% include 'hello_world.html' %}
+  <hr />
 
-            <!--RESUME-->
-            <section id="resume" class="container section">
-                    <div class="row">
-                      <div class="col-md-10">
-                        <h2 id="resume_header" class="section__title" style="text-indent: 0px;">.RESUME_</h2>
-                        <p class="section__description">
-                          Lorem ipsum dolor sit amet, <i><b>communication</b></i> adipisicing elit, <i><b>helpful</b></i> eiusmod
-                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <i><b>sence of
-                          humour</b></i> ullamco laboris nisi ut <i><b>honest</b></i> ea commodo consequat. Duis aute irure dolor in
-                          upper-intermediate english level velit  dolore eu ivivdtevoluptatem ontend developer.
-                        </p>
-                      </div>
-                    </div>
+  <!-- Import Resume -->
+  {% include 'resume.html' %}
+  <hr />
 
-                     <!-- Education -->
-                    <div class="row">
-                      <div class="col-md-8 section__resume resume-list">
-                        <h3 class="resume-list_title">education</h3>
-                        <div class="resume-list__block">
-                          <p class="resume-list__block-title">Okanagan College</p>
-                          <p class="resume-list__block-date"><strong>2016 - 2019</strong></p>
-                          <p>Bachelor's Degree, Computer Science</p>
+  <!-- Import Portfolio -->
+  {% include 'portfolio.html' %}
+  <hr />
 
-                        </div>
-                        <div class="resume-list__block">
-                          <p class="resume-list__block-title">Okanagan College</p>
-                          <p class="resume-list__block-date"><strong>2009 - 2012</strong></p>
-                          <p>Network and Telecommunications Engineering</p>
-                        </div>
-                        <div class="resume-list__block">
-                          <p class="resume-list__block-title">Summerland Secondary School</p>
-                          <p class="resume-list__block-date"><strong>2005 - 2009</strong></p>
-                          <p>High School Diploma</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Education -->
+  <!-- Import References -->
+  {% include 'references.html' %}
 
-                    <!-- Work Experience -->
-                    <div class="row">
-                      <div class="col-md-8 section__resume resume-list">
-                        <h3 class="resume-list_title">employment</h3>
+  <!-- Footer -->
+  <footer class="w3-container w3-teal">
+    <div class="footer-bottom">
+      <a href="/verifyuser" id='administrator-login'>ADMINISTRATOR</a>
+    </div>
+  </footer>
 
-                        <div class="resume-list__block">
-                          <p class="resume-list__block-title">Westgrid / Compute Canada</p>
-                          <p class="resume-list__block-date"><strong>2018</strong></p>
-                          <p>Junior Full Stack Developer</p>
-                        </div>
+  <!-- Script to handle sticky header navigation. Adds and removes CSS classes depending on offset values. --> 
+  <script>
+    window.onscroll = function () { sticky_navigation() };
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
 
-                        <div class="resume-list__block">
-                          <p class="resume-list__block-title">Liveport</p>
-                          <p class="resume-list__block-date"><strong>2014 - 2015</strong></p>
-                          <p>Senior Network Analyst</p>
-                        </div>
+    function sticky_navigation() {
+      if (window.pageYOffset > sticky) {
+        navbar.classList.add("sticky");
+      } else if (window.pageYOffset == 0) {
+        navbar.classList.remove("sticky");
+      }
+    }   
+  </script>
 
-                        <div class="resume-list__block">
-                          <p class="resume-list__block-title">Expiry / 101sitehosting</p>
-                          <p class="resume-list__block-date"><strong>2014</strong></p>
-                          <p>Web Developer</p>
-                        </div>
+<!-- Script to add and remove the "console" animation for the blinking cursor on the menu(s). -->
+  <script>
+    $(document).ready(function () {
+      $("a").click(function () {
+        $("span").removeClass("blinking-cursor").text("");
+        $(this).find('span').text("_").addClass("blinking-cursor");
+      });
+    });
+  </script>
 
-                        <div class="resume-list__block">
-                            <p class="resume-list__block-title">Open Mesh</p>
-                            <p class="resume-list__block-date"><strong>2013 - 2014</strong></p>
-                            <p>Customer Support Representative</p>
-                         </div>
-
-                         <div class="resume-list__block">
-                            <p class="resume-list__block-title">ONE Information Technology</p>
-                            <p class="resume-list__block-date"><strong>2011 - 2012</strong></p>
-                            <p>Network and Warranty Help Desk Technician</p>
-                         </div>
-
-                      </div>
-                    </div>
-                    <!-- Work Experience -->
-                
-
-                     <!-- Industry Certifications -->
-                     <div class="row">
-                            <div class="col-md-8 section__resume resume-list">
-                              <h3 class="resume-list_title">certifications and training</h3>
-      
-                              <div class="resume-list__block">
-                                <p class="resume-list__block-title">A+</p>
-                                <p class="resume-list__block-date">CompTIA</p>
-                              </div>
-      
-                              <div class="resume-list__block">
-                                <p class="resume-list__block-title">CCENT</p>
-                                <p class="resume-list__block-date">Cisco</p>
-                              </div>
-      
-                              <div class="resume-list__block">
-                                <p class="resume-list__block-title">Lenovo Warranty Repair Certification</p>
-                                <p class="resume-list__block-date">Lenovo</p>
-                              </div>
-      
-                              <div class="resume-list__block">
-                                  <p class="resume-list__block-title">Network+</p>
-                                  <p class="resume-list__block-date">CompTIA</p>
-                               </div>
-      
-                               <div class="resume-list__block">
-                                  <p class="resume-list__block-title">Ubiquitti Enterprise Wireless Administrator [UEWA]</p>
-                                  <p class="resume-list__block-date">Ubiquitti</p>
-                               </div>
-      
-                            </div>
-                          </div>
-                          <!-- Industry Certifications -->
-
-                    
-                  </section>
-            <!--RESUME-->
-
-            <hr />
-
-            <!--PORTFOLIO-->
-            <section id="portfolio" class="container section">
-                <div class="row">
-                    <div class="col-md-10">
-                        <a name="Portfolio"><h2 id="hello_header" class="section__title hello_world anim-typewriter">.PORTFOLIO<span class="blinking-cursor"> |</span></h2></a>
-
-                        <p class="section__description">
-                            Lorem ipsum dolor sit amet, communication adipisicing elit, helpful eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud sence of humour ullamco
-                            laboris nisi ut honest ea commodo consequat. Duis aute irure dolor in upper-intermediate english
-                            level velit dolore eu ivivdtevoluptatem ontend developer.
-                        </p>
-
-                        <div id="myBtnContainer">
-                            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-                            <button class="btn" onclick="filterSelection('nature')"> Nature</button>
-                            <button class="btn" onclick="filterSelection('cars')"> Cars</button>
-                            <button class="btn" onclick="filterSelection('people')"> People</button>
-                          </div>
-                          
-                          <!-- Portfolio Gallery Grid -->
-                          <div class="row">
-                            <div class="column nature">
-                              <div class="content">
-                                <img src="https://www.w3schools.com/w3images/mountains.jpg" alt="Mountains" style="width:100%">
-                                <h4>Mountains</h4>
-                                <p>Lorem ipsum dolor..</p>
-                              </div>
-                            </div>
-                            <div class="column nature">
-                              <div class="content">
-                                <img src="https://www.w3schools.com/w3images/lights.jpg" alt="Lights" style="width:100%">
-                                <h4>Lights</h4>
-                                <p>Lorem ipsum dolor..</p>
-                              </div>
-                            </div>
-                            <div class="column nature">
-                              <div class="content">
-                                <img src="https://www.w3schools.com/w3images/nature.jpg" alt="Nature" style="width:100%">
-                                <h4>Forest</h4>
-                                <p>Lorem ipsum dolor..</p>
-                              </div>
-                            </div>
-                          
-                            <div class="column cars">
-                              <div class="content">
-                                <img src="https://www.w3schools.com/w3images/cars1.jpg" alt="Car" style="width:100%">
-                                <h4>Retro</h4>
-                                <p>Lorem ipsum dolor..</p>
-                              </div>
-                            </div>
-                            <div class="column cars">
-                              <div class="content">
-                                <img src="https://www.w3schools.com/w3images/cars2.jpg" alt="Car" style="width:100%">
-                                <h4>Fast</h4>
-                                <p>Lorem ipsum dolor..</p>
-                              </div>
-                            </div>
-                            <div class="column cars">
-                              <div class="content">
-                                <img src="https://www.w3schools.com/w3images/cars3.jpg" alt="Car" style="width:100%">
-                                <h4>Classic</h4>
-                                <p>Lorem ipsum dolor..</p>
-                              </div>
-                            </div>
-                          
-                            <div class="column people">
-                              <div class="content">
-                                <img src="https://www.w3schools.com/w3images/people1.jpg" alt="People" style="width:100%">
-                                <h4>Girl</h4>
-                                <p>Lorem ipsum dolor..</p>
-                              </div>
-                            </div>
-                            <div class="column people">
-                              <div class="content">
-                                <img src="https://www.w3schools.com/w3images/people2.jpg" alt="People" style="width:100%">
-                                <h4>Man</h4>
-                                <p>Lorem ipsum dolor..</p>
-                              </div>
-                            </div>
-                            <div class="column people">
-                              <div class="content">
-                                <img src="https://www.w3schools.com/w3images/people3.jpg" alt="People" style="width:100%">
-                                <h4>Woman</h4>
-                                <p>Lorem ipsum dolor..</p>
-                              </div>
-                            </div>
-                          <!-- END GRID -->
-                          </div>
-
-                    </div>
-                </div>
-            </section>
-            <!--PORTFOLIO-->
-
-            <hr />           
-
-            <!--REFERENCES-->
-            <section id="references" class="container section">
-                <div class="row">
-                    <div class="col-md-10">
-                        <a name="References"><h2 id="hello_header" class="section__title hello_world anim-typewriter">.REFERENCES<span class="blinking-cursor"> |</span></h2></a>
-
-                        <p class="section__description">
-                            Lorem ipsum dolor sit amet, communication adipisicing elit, helpful eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud sence of humour ullamco
-                            laboris nisi ut honest ea commodo consequat. Duis aute irure dolor in upper-intermediate english
-                            level velit dolore eu ivivdtevoluptatem ontend developer.
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <!--REFERENCES-->
-
-
-            
-            <!--FOOTER-->
-            <footer class="w3-container w3-teal">
-                <div class="footer-bottom">
-                  <a href="/verifyuser" id='administrator-login'>ADMINISTRATOR</a>
-                </div>
-            </footer>
-            <!--FOOTER-->
-
-
-            <script>
-            /* Script to handle sticky navigation */
-                window.onscroll = function () { sticky_navigation() };
-                var navbar = document.getElementById("navbar");
-                var sticky = navbar.offsetTop;
-
-                function sticky_navigation() {
-                    if (window.pageYOffset > sticky) {
-                        navbar.classList.add("sticky");
-                    } else if (window.pageYOffset == 0) {
-                        navbar.classList.remove("sticky");
-                    }
-                }   
-            </script>
-
-            <script>
-            /* Script to add and remove the animation for the blinking cursor on the menu */
-            $(document).ready(function(){
-                $("a").click(function(){
-                    $("span").removeClass("blinking-cursor").text("");
-                    $(this).find('span').text("_").addClass("blinking-cursor");
-                });
-            });
-            </script>
-        
-            <script>
-            filterSelection("all") // Execute the function and show all columns
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-// Show filtered elements
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
+<!-- Script to manage the sorting/displaying of portfolio items. -->
+  <script>
+    filterSelection("all") 
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("column");
+      if (c == "all") c = "";
+      // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+      for (i = 0; i < x.length; i++) {
+        RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+      }
     }
-  }
-}
 
-// Hide elements that are not selected
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1); 
+    // Show filtered elements
+    function AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {
+          element.className += " " + arr2[i];
+        }
+      }
     }
-  }
-  element.className = arr1.join(" ");
-}
 
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}    
-                    
-            </script>
+    // Hide elements that are not selected
+    function RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
 
-        </body>
-    </html>
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+  </script>
+</body>
+</html>
